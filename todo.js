@@ -8,6 +8,7 @@ function renderTasks() {
   taskList.innerHTML = '';
   tasks.forEach((task, index) => {
     const listItem = document.createElement('li');
+
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.checked = task.completed;
@@ -15,11 +16,13 @@ function renderTasks() {
       tasks[index].completed = checkbox.checked;
       saveTasks();
     });
+    
     const taskText = document.createElement('span');
     taskText.textContent = task.text;
     if (task.completed) {
       taskText.style.textDecoration = 'line-through';
     }
+    
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
     deleteButton.addEventListener('click', () => {
@@ -27,6 +30,7 @@ function renderTasks() {
       saveTasks();
       renderTasks();
     });
+
     listItem.appendChild(checkbox);
     listItem.appendChild(taskText);
     listItem.appendChild(deleteButton);

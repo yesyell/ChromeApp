@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YellChromeApp</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+      
     <body>
         <!-- 실시간 시계 -->
-        <h1 id = "clock"></h1>
+        <div class="clock">
+            <h1>00:00</h1>
+        </div>
 
         <!-- 로컬 스토리지를 사용한 로그인 -->
         <form>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">
+            <br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">
+            <br>
             <button type="button" id="login">Log In</button>
         </form>
 
@@ -22,13 +33,18 @@
         <div id="background"></div>
 
         <!-- 날씨와 위치 (geolocation) -->
-        <h2>Weather</h2>
-        <div>
+        <div class="geolocation">
+            <h2>Weather</h2>
             <p>Location: <span id="location"></span></p>
             <p>Temperature: <span id="temperature"></span></p>
             <p>Weather: <span id="weather"></span></p>
         </div>
 
-          
+        <script src="clock.js"></script>
+        <script src="todo.js"></script>
+        <script src="login.js"></script>
+        <script src="background.js"></script>
+        <script src="geolocation.js"></script>
+
     </body>
 </html>
