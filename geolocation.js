@@ -1,7 +1,7 @@
 // 5. 날씨와 위치
 function showWeather(position) {
     const { latitude, longitude } = position.coords;
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=YOUR_API_KEY&units=metric`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=289ada0701c7e2e750576af30d9deeae&units=metric`;
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
