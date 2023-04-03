@@ -10,9 +10,9 @@ form {
     text-align: right;
 }
 
-.geolocation {
+/* .geolocation {
     text-align: center;
-}
+} */
 
 #taskInput {
     width: 300px; /* 필요한 가로 길이로 조정 */
